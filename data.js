@@ -9,7 +9,9 @@ module.exports = {
         author: 'Марк Цукерберг'
         ,created: new Date(2016, 5, 3, 21, 30)
         ,updated: '2016-07-02T03:32'
-        ,like: 21
+        ,likes: {
+          count: 21
+        }
       }
     },
     {
@@ -21,6 +23,9 @@ module.exports = {
         author: 'Сергей Брин'
         ,created: '2016-08-21T16:32'
         ,updated: '2016-08-24T13:42'
+        ,likes: {
+          count: 0
+        }
       }
     },
     {
@@ -32,7 +37,9 @@ module.exports = {
         author: 'Роб Эйзенберг'
         ,created: '2016-11-22T15:34'
         ,updated: '2016-12-10T12:54'
-        ,like: 7
+        ,likes: {
+          count: 7
+        }
       }
     },
   ]
