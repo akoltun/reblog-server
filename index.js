@@ -6,19 +6,23 @@ var items = require('./data').items;
 
 application.use(cors());
 
+const defaultDelay = 2000;
+const delayResponse = (response, delay = defaultDelay) =>
+  setTimeout(response, delay);
+
 application.get('/', function(req, res) {
-  setTimeout(() => res.json(items), 1000);
+  delayResponse(() => res.json(items));
 });
 
 application.get('/posts/:id', function(req, res) {
-  var id = req.params.id;
-  setTimeout(() => res.json(items[id]), 1000);
+  var id = req.params.id - 1;
+  delayResponse(() => res.json(items[id]));
 });
 
-application.post('/posts/:id/like', function(res, req) {
-  var id = req.params.id;
-  items[id].meta.likes = items[id].meta.likes + 1;
-  setTimeout(() => res.json(items[id]), 1000);
+application.post('/posts/:id/like', function(req, res) {
+  var id = req.params.id - 1;
+  items[id].meta.likes.count = items[id].meta.likes.count + 1;
+  delayResponse(() => res.json(items[id]));
 });
 
 application.listen(3002, function() {
