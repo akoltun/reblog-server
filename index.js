@@ -1,6 +1,9 @@
 var express = require('express');
 var application = express();
 
+var morgan = require('morgan');
+application.use(morgan('dev'));
+
 var cors = require('cors');
 var items = require('./data').items;
 
