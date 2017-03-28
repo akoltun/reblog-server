@@ -4,7 +4,7 @@ module.exports = {
       id: 1
       ,title: 'Реакт'
       ,text: 'Это значок Реакта (хотя он и не совсем фрэймворк)'
-      ,image: { src: '/dist/images/react.svg' }
+      ,image: { src: '/images/react.svg' }
       ,meta: {
         author: 'Марк Цукерберг'
         ,created: new Date(2016, 5, 3, 21, 30)
@@ -18,7 +18,7 @@ module.exports = {
       id: 2
       ,title: 'Ангуляр'
       ,text: 'А это конкурирующий фрэймворк'
-      ,image: { src: '/dist/images/angular.svg' }
+      ,image: { src: '/images/angular.svg' }
       ,meta: {
         author: 'Сергей Брин'
         ,created: '2016-08-21T16:32'
@@ -32,7 +32,7 @@ module.exports = {
       id: 3
       ,title: 'Аурелия'
       ,text: 'А это еще один фрэймворк'
-      ,image: { src: '/dist/images/aurelia.svg' }
+      ,image: { src: '/images/aurelia.svg' }
       ,meta: {
         author: 'Роб Эйзенберг'
         ,created: '2016-11-22T15:34'
